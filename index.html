@@ -368,7 +368,7 @@
 
       <!-- Register Form -->
       <form class="modal__form modal__register">
-        <label>Full Name</label>
+        <label>Name</label>
         <input type="text" required />
         <label>Email Address</label>
         <input type="email" required />
@@ -376,7 +376,7 @@
         <input type="password" required />
         <label>confirm password</label>
         <input type="password" required />
-        <button class="btn btn--primary">Get Started &rarr;</button>
+        <button class="btn btn--primary">Sign Up</button>
         <p class>
           Already registered?
           <a href="#" class="modal__toggle-login">Sign in</a>
@@ -385,11 +385,19 @@
 
       <!-- Login Form (hidden by default) -->
       <form class="modal__form modal__login" style="display: none">
-        <label>Email Address</label>
-        <input type="email" required />
+        <label>Email</label>
+        <input
+          type="email"
+          placeholder="you@example.com"
+          class="login__input login__input--email"
+        />
         <label>Password</label>
-        <input type="password" required />
-        <button class="btn btn--primary">Sign In &rarr;</button>
+        <input
+          type="password"
+          placeholder="password"
+          class="login__input login__input--password"
+        />
+        <button class="btn btn--primary login__btn">Sign In &rarr;</button>
         <p class>
           Not registered?
           <a href="#" class="modal__toggle-register">Create account</a>
@@ -398,6 +406,7 @@
     </div>
     <div class="overlay overlay--hidden"></div>
 
+    <script src="accounts.js"></script>
     <script src="script.js"></script>
   </body>
 </html>

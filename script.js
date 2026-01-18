@@ -11,6 +11,14 @@ const btnClose = document.querySelector(".modal__close");
 const navMenu = document.querySelector(".main-nav__menu");
 const hamburger = document.querySelector(".hamburger");
 const hamburgerClose = document.querySelector(".hamburger-close");
+const modalRegister = document.querySelector(".modal__register");
+const modalLogin = document.querySelector(".modal__login");
+const toggleLoginLinks = document.querySelectorAll(".modal__toggle-login");
+const toggleRegisterLinks = document.querySelectorAll(
+  ".modal__toggle-register"
+);
+const modalTitleRegister = document.querySelector(".modal__title-register");
+const modalTitleLogin = document.querySelector(".modal__title-login");
 
 // btn explore scroll to features
 btnExplore.addEventListener("click", (e) => {
@@ -71,7 +79,7 @@ const headerObserver = new IntersectionObserver(stickyNav, {
   root: null,
   threshold: 0,
   // This triggers the sticky nav 90px before the header completely leaves the view
-  rootMargin: "-90px", 
+  rootMargin: "-90px",
 });
 
 headerObserver.observe(headerSection);
@@ -270,19 +278,7 @@ dots.forEach((dot, index) => {
 // Initialize the slider
 goToSlide(0);
 
-
-
-
-
 // Modal form toggle (register <-> login)
-const modalRegister = document.querySelector(".modal__register");
-const modalLogin = document.querySelector(".modal__login");
-const toggleLoginLinks = document.querySelectorAll(".modal__toggle-login");
-const toggleRegisterLinks = document.querySelectorAll(
-  ".modal__toggle-register"
-);
-const modalTitleRegister = document.querySelector(".modal__title-register");
-const modalTitleLogin = document.querySelector(".modal__title-login");
 
 function showModalLogin() {
   if (modalRegister) modalRegister.style.display = "none";
@@ -311,3 +307,15 @@ toggleRegisterLinks.forEach((link) =>
     showModalRegister();
   })
 );
+
+/////////////////login function on click //////////////////
+const loginBtn = document.querySelector(".login__btn")
+loginBtn.addEventListener("click",function(e){
+e.preventDefault()
+window.location.href="app.html"
+})
+
+    
+
+    
+
